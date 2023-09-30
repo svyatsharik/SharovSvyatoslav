@@ -7,6 +7,10 @@ public class Animal {
         return typeMovement;
     }
 
+    public String getTypeMeal() {
+        return typeMeal;
+    }
+
     private String typeMovement;
 
     public Animal(String typeMovement, String typeMeal) {

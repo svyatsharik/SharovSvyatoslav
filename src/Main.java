@@ -15,11 +15,11 @@ public class Main {
             animal = new Horse("land", "herbivorous");
         } else if (a.equals("tiger")) {
             animal = new Tiger("land", "predator", "beef");
-        } else if (a == "dolphin") {
+        } else if (a.equals("dolphin")) {
             animal = new Dolphin("waterfowl", "predator", "fish");
-        } else if (a == "eagle") {
+        } else if (a.equals("eagle")) {
             animal = new Eagle("flying", "predator", "meat");
-        } else if (a == "camel") {
+        } else if (a.equals("camel")) {
             animal = new Camel("land", "herbivorous");
         } else {
             animal = new Animal("", "");
@@ -31,12 +31,12 @@ public class Main {
 
         String b = input.nextLine();
 
-        if (b == "type movement") {
+        if (b.equals("type movement")) {
             System.out.println(animal.getTypeMovement());
-        } else if (b == "type meal" && animal.typeMeal == "herbivorous") {
+        } else if (b.equals("type meal") && animal.getTypeMeal().equals("herbivorous")) {
             System.out.println(animal.getTypeMovement() + ", grass");
-        } else if (b == "type meal") {
-            System.out.println(animal.getTypeMovement() + ", " + animal.typeMeal);
+        } else if (b.equals("type meal")) {
+            System.out.println(animal.getTypeMovement() + ", " + animal.getTypeMeal());
         } else {
             System.out.println("Ошибка: неправильный ввод");
             return;
