@@ -6,9 +6,10 @@ public class Main {
 
         String TYPE_HORSE = "horse";
         String TYPE_TIGER = "tiger";
+        String TYPE_DOLPHIN = "dolphin";
 
         Scanner input = new Scanner(System.in);
-        Animal animal = null;
+        Animal animal;
 
         System.out.print("Введите животное ('horse', 'tiger', 'dolphin', 'eagle' или 'camel'): ");
         String a = input.nextLine();
@@ -19,7 +20,7 @@ public class Main {
             animal = new Horse("land", "herbivorous");
         } else if (a.equals(TYPE_TIGER)) {
             animal = new Tiger("land", "predator", "beef");
-        } else if (a.equals("dolphin")) {
+        } else if (a.equals(TYPE_DOLPHIN)) {
             animal = new Dolphin("waterfowl", "predator", "fish");
         } else if (a.equals("eagle")) {
             animal = new Eagle("flying", "predator", "meat");
