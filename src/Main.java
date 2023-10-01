@@ -4,6 +4,7 @@ import  java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        String TYPE_HORSE = "horse";
         Scanner input = new Scanner(System.in);
         Animal animal = null;
 
@@ -12,7 +13,7 @@ public class Main {
 
 
 
-        if (a.equals("horse")) {
+        if (a.equals(TYPE_HORSE)) {
             animal = new Horse("land", "herbivorous");
         } else if (a.equals("tiger")) {
             animal = new Tiger("land", "predator", "beef");
@@ -43,4 +44,5 @@ public class Main {
             return;
         }
     }
+
 }
