@@ -1,4 +1,4 @@
-package model;
+package ru.mts.homework2;
 
 public class Animal {
     private String typeMeal;

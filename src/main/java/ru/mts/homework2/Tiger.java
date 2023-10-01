@@ -1,4 +1,4 @@
-package model;
+package ru.mts.homework2;
 
 public class Tiger extends Animal{
     private String meal;

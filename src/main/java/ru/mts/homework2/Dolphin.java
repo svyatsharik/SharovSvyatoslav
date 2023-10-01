@@ -1,4 +1,4 @@
-package model;
+package ru.mts.homework2;
 
 public class Dolphin extends Animal{
     private String meal;
