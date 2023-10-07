@@ -8,6 +8,6 @@ public class Dolphin implements WaterAnimal, PredatoryAnimal {
 
     @Override
     public void printWaterAnimal() {
-        System.out.println("Дельфин - водоплавающий");
+        System.out.println("Дельфин - водоплавающий (ест только рыбу)");
     }
 }

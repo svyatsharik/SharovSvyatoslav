@@ -8,6 +8,6 @@ public class Tiger implements LandAnimal, PredatoryAnimal {
 
     @Override
     public void printPredatoryAnimal() {
-        System.out.println("Тигр - хищник");
+        System.out.println("Тигр - хищник (ест только говядину)");
     }
 }
