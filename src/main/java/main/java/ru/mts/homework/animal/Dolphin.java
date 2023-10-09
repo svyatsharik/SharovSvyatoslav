@@ -1,4 +1,4 @@
-package ru.mts.homework2;
+package main.java.ru.mts.homework.animal;
 
 public class Dolphin implements WaterAnimal, PredatoryAnimal {
     @Override

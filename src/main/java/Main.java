@@ -1,4 +1,6 @@
-import ru.mts.homework2.*;
+import main.java.ru.mts.homework.animal.Dolphin;
+import main.java.ru.mts.homework.animal.Eagle;
+import main.java.ru.mts.homework.animal.*;
 
 public class Main {
     public static void main(String[] args) {
