@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class Sorts {
 
-    public static void bubbleSort(int[] arr) {
+    public static int[] bubbleSort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[i] > arr[j]) {
@@ -13,9 +13,12 @@ public class Sorts {
                 }
             }
         }
+        return arr;
     }
 
-    public static void basicSort(int[] arr) {
+    public static int[] basicSort(int[] arr) {
+
         Arrays.sort(arr);
+        return arr;
     }
 }
