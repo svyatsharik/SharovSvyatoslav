@@ -1,7 +1,6 @@
 package ru.mts.homework.sort;
-import java.util.Arrays;
 
-public class Sorts {
+public class BubbleSort {
 
     public static int[] bubbleSort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
@@ -16,9 +15,5 @@ public class Sorts {
         return arr;
     }
 
-    public static int[] basicSort(int[] arr) {
 
-        Arrays.sort(arr);
-        return arr;
-    }
 }
