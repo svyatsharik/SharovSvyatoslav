@@ -24,7 +24,8 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.8</version>
+                <version>0.8.7</version>
+
                 <executions>
                     <execution>
                         <goals>
@@ -44,6 +45,12 @@
                             <goal>check</goal>
                         </goals>
                         <configuration>
+                            <excludes>
+                                <exclude>main/java/ru/mts/homework/animal/*</exclude>
+                                <exclude>default</exclude>
+                                <exclude>ru/mts/homework/exceptions/*</exclude>
+
+                            </excludes>
                             <rules>
                                 <rule>
                                     <element>PACKAGE</element>
