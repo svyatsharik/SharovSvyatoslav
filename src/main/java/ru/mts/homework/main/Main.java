@@ -1,3 +1,5 @@
+package ru.mts.homework.main;
+
 import ru.mts.homework.sort.*;
 import ru.mts.homework.exceptions.*;;
 

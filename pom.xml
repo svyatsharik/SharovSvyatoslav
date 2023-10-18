@@ -47,8 +47,9 @@
                         <configuration>
                             <excludes>
                                 <exclude>main/java/ru/mts/homework/animal/*</exclude>
-                                <exclude>default</exclude>
                                 <exclude>ru/mts/homework/exceptions/*</exclude>
+                                <exclude>ru/mts/homework/main/*</exclude>
+
 
                             </excludes>
                             <rules>
@@ -65,17 +66,6 @@
                             </rules>
                         </configuration>
                     </execution>
-<!--                    <execution>-->
-<!--                        <id>post-unit-test</id>-->
-<!--                        <phase>test</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>report</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <dataFile>target/jacoco.exec</dataFile>-->
-<!--                            <outputDirectory>target/jacoco-ut</outputDirectory>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
                 </executions>
             </plugin>
 
