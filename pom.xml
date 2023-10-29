@@ -51,7 +51,6 @@
                                 <exclude>ru/mts/homework/main/*</exclude>
 
 
-
                             </excludes>
                             <rules>
                                 <rule>
