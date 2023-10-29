@@ -1,3 +1,5 @@
+package ru.mts.homework.sort;
+
 import org.junit.jupiter.api.Test;
 import ru.mts.homework.sort.BasicSort;
 
