@@ -46,9 +46,8 @@
                         </goals>
                         <configuration>
                             <excludes>
-                                <exclude>main/java/ru/mts/homework/animal/*</exclude>
-                                <exclude>ru/mts/homework/exceptions/*</exclude>
-                                <exclude>ru/mts/homework/main/*</exclude>
+                                <exclude>ru/mts/homework/animal/*</exclude>
+                                <exclude>ru/mts/homework/sorts/*</exclude>
                             </excludes>
                             <rules>
                                 <rule>
@@ -66,7 +65,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 
