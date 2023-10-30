@@ -31,6 +31,7 @@ public class Main {
         System.out.println("Выберите тип сортировки: 1 - сортировка пузырьком, иначе - сортировка слиянием");
         k = input.nextInt();
 
+
         Boolean found = false;
 
         if (k == 1) {
