@@ -38,7 +38,8 @@ class ApplicationTest {
       });
     }
     latch.await();
+    for (int i = 1; i < enrichmentResults.size(); i++) {
+      assertSame(enrichmentResults.get(i), enrichmentResults.get(i - 1));
+    }
   }
-
-
 }
