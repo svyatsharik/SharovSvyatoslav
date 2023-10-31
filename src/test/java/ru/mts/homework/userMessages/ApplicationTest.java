@@ -25,6 +25,7 @@ class ApplicationTest {
     assertSame(message2.content.get("lastName"), user.lastName);
   }
 
+
   @Test
   void shouldSucceedEnrichmentInConcurrentEnvironmentSuccessfully() throws InterruptedException {
     Message message2 = enrichment.enrichment(message);
