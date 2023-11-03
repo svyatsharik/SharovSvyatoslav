@@ -1,13 +1,13 @@
 package ru.mts.homework.userMessages;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.*;
 import java.util.concurrent.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ApplicationTest {
+public class ApplicationTest {
 
   Map<String, String> input = new ConcurrentHashMap<>();
   Message message = new Message(input, Message.EnrichmentType.MSISDN);
@@ -15,7 +15,7 @@ class ApplicationTest {
   EnrichmentService enrichment = new EnrichmentService();
 
   @Test
-  void checkEnrichment() {
+  public void checkEnrichment() {
     input.put("action", "button_click");
     input.put("page", "book_card");
     input.put("msisdn", "88005553535");
@@ -27,7 +27,7 @@ class ApplicationTest {
 
 
   @Test
-  void shouldSucceedEnrichmentInConcurrentEnvironmentSuccessfully() throws InterruptedException {
+  public void shouldSucceedEnrichmentInConcurrentEnvironmentSuccessfully() throws InterruptedException {
     Message message2 = enrichment.enrichment(message);
     List<Message> enrichmentResults = new CopyOnWriteArrayList<>();
     ExecutorService executorService = Executors.newFixedThreadPool(5);
