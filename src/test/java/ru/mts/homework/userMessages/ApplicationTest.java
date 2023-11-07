@@ -37,6 +37,7 @@ public class ApplicationTest {
         latch.countDown();
       });
     }
+
     latch.await();
     for (int i = 0; i < enrichmentResults.size() - 1; i++) {
       assertSame(enrichmentResults.get(i), enrichmentResults.get(i + 1));
