@@ -28,7 +28,6 @@ public class ApplicationTest {
 
   @Test
   public void shouldSucceedEnrichmentInConcurrentEnvironmentSuccessfully() throws InterruptedException {
-    Message message2 = enrichment.enrichment(message);
     List<Message> enrichmentResults = new CopyOnWriteArrayList<>();
     ExecutorService executorService = Executors.newFixedThreadPool(5);
     CountDownLatch latch = new CountDownLatch(5);
