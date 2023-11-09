@@ -1,7 +1,10 @@
-package ru.mts.homework.main;
+package ru.mts.homework.sorts.main;
 
-import ru.mts.homework.sort.*;
-import ru.mts.homework.exceptions.*;;
+import ru.mts.homework.sorts.sort.*;
+import ru.mts.homework.sorts.exceptions.*;
+import ru.mts.homework.sorts.exceptions.SizeException;
+import ru.mts.homework.sorts.sort.BasicSort;
+import ru.mts.homework.sorts.sort.BubbleSort;;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,6 +30,7 @@ public class Main {
 
         System.out.println("Выберите тип сортировки: 1 - сортировка пузырьком, иначе - сортировка слиянием");
         k = input.nextInt();
+
 
         Boolean found = false;
 

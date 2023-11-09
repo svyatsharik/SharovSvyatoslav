@@ -1,4 +1,4 @@
-package ru.mts.homework.sort;
+package ru.mts.homework.sorts.sort;
 
 import java.util.Arrays;
 

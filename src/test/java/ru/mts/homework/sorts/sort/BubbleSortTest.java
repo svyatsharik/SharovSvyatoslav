@@ -1,5 +1,6 @@
+package ru.mts.homework.sorts.sort;
+
 import org.junit.jupiter.api.Test;
-import ru.mts.homework.sort.BubbleSort;
 
 import java.util.Arrays;
 
