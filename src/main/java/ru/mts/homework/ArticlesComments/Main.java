@@ -1,6 +1,7 @@
 package ru.mts.homework.ArticlesComments;
 
 
+import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
 import spark.Spark;
@@ -8,6 +9,12 @@ import spark.Spark;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import spark.template.freemarker.FreeMarkerEngine;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Main {
 
@@ -16,6 +23,7 @@ public class Main {
   public static void main(String[] args) {
     ObjectMapper objMapper = new ObjectMapper();
     ArticlesRepository repos = new ArticlesRepository();
+    FreeMarkerEngine freeMarkerEngine = TemplateFactory.freeMarkerEngine();
 
     Spark.post("/article/create", (Request req, Response rep) -> {
       ArticleCreateRequest artReq = objMapper.readValue(
@@ -84,6 +92,16 @@ public class Main {
       repos.deleteCommentFromArticle(articleId, commentId);
       return objMapper.writeValueAsString(
               new CommentCreateResponse(repos.getArticleById(articleId)));
+    });
+
+    Spark.get("/", (Request req, Response rep) -> {
+      Collection<Article> articles = repos.getArticles();
+      List<Map<String, String>> articleMapList = articles.stream()
+              .map(article -> Map.of("name", article.getTitle(), "comments", Long.valueOf(article.getComments().size()).toString()))
+              .toList();
+      Map<String, Object> model = new HashMap<>();
+      model.put("articles",articleMapList);
+      return freeMarkerEngine.render(new ModelAndView(model, "/index.ftl"));
     });
   }
 }
