@@ -1,13 +1,22 @@
 package ru.mts.homework.ArticlesComments;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CommentCreateResponse {
-  private final Article article;
-  public CommentCreateResponse (Article article){
-    this.article = article;
+  private final CommentId commentId;
+
+  public CommentCreateResponse (CommentId commentId){
+    this.commentId = commentId;
   }
 
-  public Article getArticle() {
-    return article;
+  @JsonCreator
+  public CommentCreateResponse (
+          @JsonProperty("commendid") long commentId){
+    this.commentId = new CommentId(commentId);
+  }
+
+  public long getCommentId() {
+    return commentId.getCommentId();
   }
 }

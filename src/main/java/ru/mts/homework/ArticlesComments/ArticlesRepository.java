@@ -24,26 +24,31 @@ public class ArticlesRepository {
     return articles.values();
   }
 
+
   public Article getArticleById(ArticleId artId){
     return (Article)articles.get(artId);
   }
 
   public Article deleteArticle(ArticleId artId){
+
     return articles.remove(artId);
   }
 
   public Article updateArticle(ArticleId articleId, String articleName){
+
     return articles.put(
             articleId,
             new Article(articleId, articleName)
     );
   }
 
-  public boolean addCommentToArticle(ArticleId articleId, String comment){
+  public CommentId addCommentToArticle(ArticleId articleId, String comment){
+
     Article article = (Article)articles.get(articleId);
-    boolean res = article.addNewComment(new Comment(articleId, new CommentId(commentId), comment));
+    CommentId id = new CommentId(commentId);
+    boolean res = article.addNewComment(new Comment(articleId, id, comment));
     commentId ++;
-    return res;
+    return id;
   }
 
   public long getNumberOfComments(ArticleId artId){
@@ -55,4 +60,5 @@ public class ArticlesRepository {
     Article article = (Article)articles.get(articleId);
     article.deleteComment(commentId);
   }
+
 }
