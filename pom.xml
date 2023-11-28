@@ -49,7 +49,6 @@
                                 <exclude>main/java/ru/mts/homework/animal/*</exclude>
                                 <exclude>main/java/ru/mts/homework/sorts/*</exclude>
                                 <exclude>main/java/ru/mts/homework/userMessages/*</exclude>
-                                <exclude>test/java/ru/mts/homework/ArticleComments/*</exclude>
                             </excludes>
                             <rules>
                                 <rule>

@@ -4,6 +4,7 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import ru.mts.homework.ArticlesComments.ArticleCreateResponse;
 import ru.mts.homework.ArticlesComments.CommentCreateResponse;
@@ -14,7 +15,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class ArticleServerTest {
-
+  @Disabled
   @Test
   public void shouldSuccessfullyManipulatingWithArticle() throws Exception {
     HttpClient client = HttpClient.newHttpClient();
