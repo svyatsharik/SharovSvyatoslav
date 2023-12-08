@@ -1,9 +1,6 @@
 package ru.mts.homework.ArticlesComments;
 
-import java.util.ArrayList;
-import java.util.Set;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Article {
   private final ArticleId id;
@@ -34,11 +31,6 @@ public class Article {
 
   public List<Comment> getComments() {
     return comments;
-  }
-
-  @Override
-  public String toString() {
-    return "{\n\"id\": " + id + ",\n\"title\": " + title + ",\n \"comments: \"" + comments.toString() + "}\n";
   }
 
   public boolean addNewComment(Comment comment){
