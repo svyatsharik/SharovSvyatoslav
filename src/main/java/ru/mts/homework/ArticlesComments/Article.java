@@ -33,6 +33,11 @@ public class Article {
     return comments;
   }
 
+  @Override
+  public String toString() {
+    return "{\n\"id\": " + id + ",\n\"title\": " + title + ",\n \"comments: \"" + comments.toString() + "}\n";
+  }
+
   public boolean addNewComment(Comment comment){
     return comments.add(comment);
   }

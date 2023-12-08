@@ -24,5 +24,11 @@ public class Comment {
     return commentMessage;
   }
 
+  @Override
+  public boolean equals(Object obj) {
+    if (obj == null) { return false; }
+    Comment c = (Comment)obj;
+    return commentId.equals(c.getCommentId());
+  }
 
 }
