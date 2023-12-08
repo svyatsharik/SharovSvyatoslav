@@ -16,6 +16,7 @@ public class Article {
     this.title = artName;
     tags = new TreeSet<String>();
     comments = new ArrayList<Comment>();
+
   }
 
 

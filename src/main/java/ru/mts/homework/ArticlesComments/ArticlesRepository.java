@@ -35,20 +35,23 @@ public class ArticlesRepository {
   }
 
   public Article updateArticle(ArticleId articleId, String articleName){
+    Article article = new Article(articleId, articleName);
+    articles.put(articleId, article);
+    return article;
 
-    return articles.put(
-            articleId,
-            new Article(articleId, articleName)
-    );
   }
 
   public CommentId addCommentToArticle(ArticleId articleId, String comment){
 
     Article article = (Article)articles.get(articleId);
     CommentId id = new CommentId(commentId);
-    boolean res = article.addNewComment(new Comment(articleId, id, comment));
-    commentId ++;
-    return id;
+    if (article != null) {
+      boolean res = article.addNewComment(new Comment(articleId, id, comment));
+      commentId++;
+      return id;
+    } else {
+      throw new RuntimeException("Article not found by articleId: " + article.getId().getId());
+    }
   }
 
   public long getNumberOfComments(ArticleId artId){

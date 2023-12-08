@@ -1,6 +1,5 @@
 package ru.mts.homework.ArticlesComments;
 
-
 public class ArticleUpdateResponse {
   private final ArticleId articleId;
   private final String articleName;

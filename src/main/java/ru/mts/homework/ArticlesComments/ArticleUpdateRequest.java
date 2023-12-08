@@ -12,7 +12,9 @@ public class ArticleUpdateRequest {
           @JsonProperty("name") String newArticleName){
     this.articleId = articleId;
     this.newArticleName = newArticleName;
+
   }
+
 
   public String getNewArticleName() {
     return newArticleName;

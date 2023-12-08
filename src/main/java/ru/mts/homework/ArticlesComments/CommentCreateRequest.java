@@ -13,6 +13,7 @@ public class CommentCreateRequest {
           @JsonProperty("message") String commentMessage){
     this.articleId = articleId;
     this.commentMessage = commentMessage;
+
   }
 
 

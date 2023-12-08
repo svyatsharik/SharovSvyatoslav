@@ -9,6 +9,7 @@ public class ArticleId {
     id = artId;
   }
 
+
   public long getId() {
     return id;
   }
@@ -20,6 +21,7 @@ public class ArticleId {
     }
     ArticleId articleId = (ArticleId)obj;
     return articleId.getId() == this.id;
+
   }
 
   @Override

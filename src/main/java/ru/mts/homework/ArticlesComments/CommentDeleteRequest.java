@@ -8,12 +8,14 @@ public class CommentDeleteRequest {
 
   private final long commentId;
 
+
   @JsonCreator
   public CommentDeleteRequest(
           @JsonProperty("artid") long articleId,
           @JsonProperty("commentid") long commentId){
     this.articleId = articleId;
     this.commentId = commentId;
+
   }
 
   public long getArticleId() {

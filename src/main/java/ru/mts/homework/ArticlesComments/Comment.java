@@ -30,4 +30,5 @@ public class Comment {
     Comment c = (Comment)obj;
     return commentId.equals(c.getCommentId());
   }
+
 }
