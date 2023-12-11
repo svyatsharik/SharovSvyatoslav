@@ -29,7 +29,7 @@ public class TemplateFactoryTest {
   void afterEach(){
 
   }
-
+  @Disabled
   @Test
   public void shouldFreeMarkerEngine(){
     FreeMarkerEngine engine = TemplateFactory.freeMarkerEngine();

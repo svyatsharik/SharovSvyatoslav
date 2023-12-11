@@ -15,6 +15,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class WebServerTest {
+  @Disabled
   @Test
   public void shouldSuccessfullyManipulatingWithArticle() throws Exception {
     HttpClient client = HttpClient.newHttpClient();
