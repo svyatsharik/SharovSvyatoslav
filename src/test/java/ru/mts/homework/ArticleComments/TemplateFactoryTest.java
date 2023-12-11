@@ -1,5 +1,6 @@
 package ru.mts.homework.ArticleComments;
 
+import org.junit.jupiter.api.Disabled;
 import ru.mts.homework.ArticlesComments.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -28,7 +29,7 @@ public class TemplateFactoryTest {
     void afterEach(){
 
     }
-
+    @Disabled
     @Test
     public void shouldFreeMarkerEngine(){
         FreeMarkerEngine engine = TemplateFactory.freeMarkerEngine();

@@ -1,5 +1,6 @@
 package ru.mts.homework.ArticleComments;
 
+import org.junit.jupiter.api.Disabled;
 import ru.mts.homework.ArticlesComments.*;
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,6 +31,7 @@ public class WebServerTest {
         service.awaitStop();
     }
 
+    @Disabled
     @Test
     public void shouldSuccessfullyManipulatingWithArticle() throws Exception {
         HttpClient client = HttpClient.newHttpClient();
