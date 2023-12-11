@@ -46,9 +46,10 @@
                         </goals>
                         <configuration>
                             <excludes>
-                                <exclude>main/java/ru/mts/homework/animal/*</exclude>
-                                <exclude>main/java/ru/mts/homework/sorts/*</exclude>
-                                <exclude>main/java/ru/mts/homework/userMessages/*</exclude>
+                                <exclude>ru.mts.homework.animal</exclude>
+                                <exclude>ru.mts.homework.sorts</exclude>
+                                <exclude>ru.mts.homework.userMessages</exclude>
+                                <exclude>ru.mts.homework</exclude>
                             </excludes>
                             <rules>
                                 <rule>

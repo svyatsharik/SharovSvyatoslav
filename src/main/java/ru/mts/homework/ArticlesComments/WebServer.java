@@ -16,9 +16,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Main {
+public class WebServer {
 
-  private static final Logger LOG = LoggerFactory.getLogger(Main.class);
+  private static final Logger LOG = LoggerFactory.getLogger(WebServer.class);
 
   public static void main(String[] args) {
 

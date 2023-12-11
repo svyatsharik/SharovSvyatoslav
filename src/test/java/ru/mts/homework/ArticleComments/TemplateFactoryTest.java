@@ -30,7 +30,6 @@ public class TemplateFactoryTest {
 
   }
 
-  @Disabled
   @Test
   public void shouldFreeMarkerEngine(){
     FreeMarkerEngine engine = TemplateFactory.freeMarkerEngine();
