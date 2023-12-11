@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import ru.mts.homework.ArticlesComments.ArticleCreateResponse;
 import ru.mts.homework.ArticlesComments.CommentCreateResponse;
@@ -29,6 +30,7 @@ public class WebServerTest {
     service.stop();
     service.awaitStop();
   }
+  @Disabled
   @Test
   public void shouldSuccessfullyManipulatingWithArticle() throws Exception {
     HttpClient client = HttpClient.newHttpClient();

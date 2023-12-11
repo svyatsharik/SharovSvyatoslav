@@ -29,7 +29,6 @@ public class TemplateFactoryTest {
   void afterEach(){
 
   }
-  @Disabled
   @Test
   public void shouldFreeMarkerEngine(){
     FreeMarkerEngine engine = TemplateFactory.freeMarkerEngine();
@@ -44,6 +43,6 @@ public class TemplateFactoryTest {
             .toList();
     Map<String, Object> model = new HashMap<>();
     model.put("articles",articleMapList);
-    assertTrue(!engine.render(new ModelAndView(model, "/index.ftl")).equals(""));
+    assertTrue(!engine.render(new ModelAndView(model, "/resources/index.ftl")).equals(""));
   }
 }
