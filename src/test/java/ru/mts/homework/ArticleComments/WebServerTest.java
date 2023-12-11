@@ -4,10 +4,12 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.mts.homework.ArticlesComments.ArticleCreateResponse;
 import ru.mts.homework.ArticlesComments.CommentCreateResponse;
+import spark.Service;
 
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -15,7 +17,18 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class WebServerTest {
-  @Disabled
+  private Service service;
+
+  @BeforeEach
+  void beforeEach(){
+    service = Service.ignite();
+  }
+
+  @AfterEach
+  void afterEach(){
+    service.stop();
+    service.awaitStop();
+  }
   @Test
   public void shouldSuccessfullyManipulatingWithArticle() throws Exception {
     HttpClient client = HttpClient.newHttpClient();
