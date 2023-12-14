@@ -46,10 +46,7 @@
                         </goals>
                         <configuration>
                             <excludes>
-                                <exclude>ru.mts.homework.animal</exclude>
-                                <exclude>ru.mts.homework.sorts</exclude>
-                                <exclude>ru.mts.homework.userMessages</exclude>
-                                <exclude>ru.mts.homework</exclude>
+                                <exclude>**/animal/**</exclude>
                             </excludes>
                             <rules>
                                 <rule>
