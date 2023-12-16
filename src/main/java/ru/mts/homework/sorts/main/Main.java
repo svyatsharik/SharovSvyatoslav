@@ -1,10 +1,7 @@
 package ru.mts.homework.sorts.main;
 
-import ru.mts.homework.sorts.sort.*;
-import ru.mts.homework.sorts.exceptions.*;
 import ru.mts.homework.sorts.exceptions.SizeException;
-import ru.mts.homework.sorts.sort.BasicSort;
-import ru.mts.homework.sorts.sort.BubbleSort;;
+import ru.mts.homework.sorts.sort.*;
 
 import java.util.HashMap;
 import java.util.Map;

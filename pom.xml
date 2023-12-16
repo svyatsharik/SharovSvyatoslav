@@ -28,6 +28,8 @@
                 <configuration>
                     <excludes>
                         <exclude>**/animal/**</exclude>
+                        <exclude>**/sorts/**</exclude>
+                        <exclude>**/userMessages/**</exclude>
                     </excludes>
                 </configuration>
                 <executions>
