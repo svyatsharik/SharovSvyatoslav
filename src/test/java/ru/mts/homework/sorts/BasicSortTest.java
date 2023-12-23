@@ -1,6 +1,7 @@
-package ru.mts.homework.sorts.sort;
+package ru.mts.homework.sorts;
 
 import org.junit.jupiter.api.Test;
+import ru.mts.homework.sorts.sort.BasicSort;
 
 import java.util.Arrays;
 
