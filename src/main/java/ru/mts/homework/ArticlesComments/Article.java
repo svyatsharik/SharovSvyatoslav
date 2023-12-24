@@ -1,6 +1,9 @@
 package ru.mts.homework.ArticlesComments;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.List;
+import java.util.TreeSet;
 
 public class Article {
   private final ArticleId id;
@@ -16,6 +19,12 @@ public class Article {
 
   }
 
+  public Article(long artId, String artName, boolean trending) {
+    this.id = new ArticleId(artId);
+    this.title = artName;
+    tags = new TreeSet<String>();
+    comments = new ArrayList<Comment>();
+  }
 
   public ArticleId getId() {
     return id;
@@ -40,6 +49,10 @@ public class Article {
 
   public boolean addNewComment(Comment comment){
     return comments.add(comment);
+  }
+
+  public void addComments(List<Comment> comments){
+    this.comments.addAll(comments);
   }
 
   public boolean deleteComment(CommentId commentId){

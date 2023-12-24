@@ -10,12 +10,12 @@ import java.util.Collection;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ArticleRepositoryTest {
-    private ArticlesRepository repository;
+public class ArticleRepositoryMemTest {
+    private ArticleRepositoryMem repository;
 
     @BeforeEach
     void beforeEach(){
-        this.repository = new ArticlesRepository();
+        this.repository = new ArticleRepositoryMem();
     }
 
     @AfterEach

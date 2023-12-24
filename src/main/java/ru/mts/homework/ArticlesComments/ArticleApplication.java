@@ -18,12 +18,12 @@ public class ArticleApplication {
 
   private static final Logger LOG = LoggerFactory.getLogger(WebServer.class);
   private final ObjectMapper objMapper;
-  private final ArticlesRepository repos;
+  private final ArticleRepositoryMem repos;
   private final FreeMarkerEngine freeMarkerEngine;
   private Service service;
   public ArticleApplication(Service service){
     this.objMapper = new ObjectMapper();
-    this.repos = new ArticlesRepository();
+    this.repos = new ArticleRepositoryMem();
     this.freeMarkerEngine = TemplateFactory.freeMarkerEngine();
     this.service = service;
   }
