@@ -18,11 +18,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class TemplateFactoryTest {
-    private ArticlesRepository repos;
+    private ArticleRepositoryMem repos;
 
     @BeforeEach
     void beforeEach(){
-        repos = new ArticlesRepository();
+        repos = new ArticleRepositoryMem();
     }
 
     @AfterEach

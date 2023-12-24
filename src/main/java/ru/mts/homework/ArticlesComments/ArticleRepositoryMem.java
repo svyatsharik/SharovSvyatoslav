@@ -2,11 +2,11 @@ package ru.mts.homework.ArticlesComments;
 
 import java.util.*;
 
-public class ArticlesRepository {
+public class ArticleRepositoryMem implements ArticleRepository {
   private final Map<ArticleId, Article> articles;
   private long artId;
   private long commentId;
-  public ArticlesRepository(){
+  public ArticleRepositoryMem(){
     articles = new HashMap<ArticleId, Article>();
     artId = 0;
     commentId = 0;
