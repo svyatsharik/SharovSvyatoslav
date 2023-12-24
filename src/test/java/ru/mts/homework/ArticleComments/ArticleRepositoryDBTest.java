@@ -36,7 +36,7 @@ class ArticleRepositoryDBTest {
                     .dataSource(postgresJdbcUrl, POSTGRES.getUsername(), POSTGRES.getPassword())
                     .load();
     flyway.migrate();
-
+    jdbi = Jdbi.create(postgresJdbcUrl, POSTGRES.getUsername(), POSTGRES.getPassword());
 
   }
 
