@@ -1,10 +1,9 @@
 select
- count(p.profile_id)
+   count(p.profile_id)
 from 
-  profile p,
-  post pst
-where
-  p.profile_id = pst.profile_id;
+  profile p left join post pst on p.profile_id = pst.profile_id 
+group by pst.post_id  
+having count(pst.profile_id) = 0
 
 
 select
@@ -25,10 +24,8 @@ order by p.post_id;
 select
   p.post_id
 from
-  post p,
-  comment c
-where
-  p.post_id = c.post_id
+  post p inner join comment c on p.post_id = c.post_id
 group by p.post_id
 having count(c.comment_id) between 0 and 1
+order by p.post_id
 limit 10
